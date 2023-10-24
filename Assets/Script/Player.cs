@@ -31,6 +31,9 @@ public class Player : MonoBehaviour
     //  >>>Variáveis Raycast <<< 
     Ray ray;
     TextMeshProUGUI TMPROText;
+
+    //  >>>Variáveis Inventário <<< 
+    public Bag bag;
     #endregion
 
     void Start()
@@ -144,13 +147,12 @@ public class Player : MonoBehaviour
 
             if (hit.transform != null && hit.transform.CompareTag("Item"))
             {
-                Item item = hit.transform.GetComponent<Item>();
-                TMPROText.text = item.OnFocus();
+                KeyObject keyObject = hit.transform.GetComponent<KeyObject>();
+                
 
                 if (Input.GetMouseButtonDown(0))
                 {
-                    item.CollectMe(hit.transform.gameObject);
-                    item._itemEvent.Invoke();
+                  
                 }
             }
             else TMPROText.text = " "; 

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2234,7 +2234,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh16300
+  m_Name: pb_Mesh22978
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2481,7 +2481,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh16206
+  m_Name: pb_Mesh22884
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -5058,9 +5058,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1441159388}
-  - component: {fileID: 1441159389}
   - component: {fileID: 1441159390}
-  - component: {fileID: 1441159391}
+  - component: {fileID: 1441159389}
   m_Layer: 3
   m_Name: Chave
   m_TagString: Item
@@ -5093,27 +5092,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1441159387}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d6104176a77f12242a3654c493ea9a11, type: 3}
+  m_Script: {fileID: 11500000, guid: 0117d853eeb003845b2ae4205d75b95e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _itemEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1441159391}
-        m_TargetAssemblyTypeName: Key, Assembly-CSharp
-        m_MethodName: TheyKey
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  _name: Chave do Quarto
-  _description: Uma chave encontrada em cima da mesa do quarto
-  _textItem: 
+  key: {fileID: 11400000, guid: 78c169f8b5f64b24bbcfb6c082717c88, type: 2}
 --- !u!65 &1441159390
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5127,18 +5109,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 4, y: 4, z: 4}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1441159391
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1441159387}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bce2cbbc410f8454eaf8d1b5b5184601, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1455627207
 GameObject:
   m_ObjectHideFlags: 0
@@ -6193,6 +6163,7 @@ MonoBehaviour:
   speed: 10
   speedRotation: 200
   forceJump: 0.3
+  bag: {fileID: 11400000, guid: 5a1a6a2e838e4ec408b0c2937f1a3afc, type: 2}
 --- !u!95 &523143554434932284
 Animator:
   serializedVersion: 3

@@ -2,18 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Key : MonoBehaviour
+[CreateAssetMenu(fileName = "New Item", menuName = "Key Item")]
+public class Key : Item
 {
+    public int id;
+    
 
-    //Função Empacotada
-    public void TheyKey()
+    public void Awake()
     {
-        print("Eu sou uma chave");
+        type = ItemType.Keys;
     }
 
-    //Função empacotada
-    public void DestroyObject()
-    {
-        Destroy(gameObject);
-    }
 }
