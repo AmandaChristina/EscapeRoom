@@ -52,7 +52,7 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        
         MovePlayer(); //chamar função 
         CameraPlayer(); //chamar função
         JumpPlayer(); //chamar Função
@@ -140,6 +140,7 @@ public class Player : MonoBehaviour
     {
         
         RaycastHit hit;
+        ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
         if (Physics.Raycast(ray, out hit, Mathf.Infinity))
         {
@@ -147,16 +148,28 @@ public class Player : MonoBehaviour
 
             if (hit.transform != null && hit.transform.CompareTag("Item"))
             {
-                KeyObject keyObject = hit.transform.GetComponent<KeyObject>();
-                
+                ItemObject item = hit.transform.GetComponent<ItemObject>();
 
-                if (Input.GetMouseButtonDown(0))
+                if (item)
                 {
-                  
+                    TMPROText.text = item.item.name + "\n \n " + item.item.description;
+
+                    if (Input.GetMouseButtonDown(0))
+                    {
+                        bag.AddItem(item.item, 1);
+                        Destroy(hit.transform.gameObject);
+
+                    }
                 }
+                
             }
             else TMPROText.text = " "; 
         }
+    }
+
+    private void OnApplicationQuit()
+    {
+        bag.bag.Clear();
     }
 
     private void OnDrawGizmos()

@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.Events; //Adicionar biblioteca de eventos
 
 
+
 public enum ItemType
 {
     Keys,
@@ -22,6 +23,7 @@ public class Item : ScriptableObject
     public string description;
     public ItemType type;
     public GameObject prefab;
+    public Sprite sprite;
   
 
 }

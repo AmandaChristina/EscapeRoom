@@ -14,4 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Chave do Quarto
   description: Uma chave encontrada em cima da mesa do quarto inicial
-  id: 0
+  type: 0
+  prefab: {fileID: 9089583880218804684, guid: 1c520c23265191c44be79b9adce2e343, type: 3}
+  sprite: {fileID: 21300000, guid: 0a3e557e435b0434f80ccf5bd4bf3422, type: 3}
+  id: 4
